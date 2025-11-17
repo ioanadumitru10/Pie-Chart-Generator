@@ -1,0 +1,220 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
+    padding: 10px;
+}
+
+body {
+    background-color: #ffe3fe;
+    text-align: center;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+/* Container styling */
+.container {
+    background-color: azure;
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 60px;
+    padding: 40px;
+}
+
+/* Layout of both sides */
+.generator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.input-section {
+    flex: 1 1 420px;
+    min-width: 320px;
+    max-width: 480px;
+}
+
+.chart-section {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+/* Inputs and rows */
+.input-data {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: black;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.data-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.data-row input {
+    flex: 1;
+}
+
+.data-row button {
+    background-color: rgb(225, 115, 115);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.data-row button:hover {
+    background-color: #f04e3c;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.12s ease;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.12);
+}
+
+.add-btn { background-color: #2aa0e4; }
+.add-btn:hover { background-color: #258cd1; }
+
+.generate-btn { background-color: #34f183; }
+.generate-btn:hover { background-color: #2ac169; }
+
+.reset-btn { background-color: #f53238; }
+.reset-btn:hover { background-color: #c62b2b; }
+
+.chart-container {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#pie-chart {
+    display: block;
+    margin: 0 auto;
+    background: transparent; 
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.chart-title {
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 8px;
+    border: 1px solid #aaa;
+}
+
+.format-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.format-btn {
+    padding: 8px 16px;
+    background-color: lightgrey;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.18);
+}
+
+.format-btn.pressed {
+    background-color: #6c32eb;
+    color: white;
+    transform: translateY(4px);
+    box-shadow: inset 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.download-btn {
+    background-color: #6c32eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgba(75,28,170,0.6);
+}
+
+.download-btn:hover {
+    background-color: #702bc6;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .generator {
+        flex-direction: column;
+        align-items: center;
+    }
+}
